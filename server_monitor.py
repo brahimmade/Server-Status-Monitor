@@ -1,9 +1,14 @@
 
 import time
+
 import logging
+
 import smtplib
+
 import requests
+
 from decouple import config
+
 from email.mime.text import MIMEText
  
 class ServerMonitor:
@@ -37,7 +42,7 @@ class ServerMonitor:
     def send_email(self, subject: str, body: str):
         for i in range(self.max_retries):
             try:
-                sender = config("SENDER", default="ServerMonitor@example.com")
+                sender = config("EMAIL_FROM", default="ServerMonitor@example.com")
                 msg = MIMEText(body)
                 msg["Subject"] = subject
                 msg["From"] = sender
@@ -70,8 +75,12 @@ class ServerMonitor:
 
 
 # Example usage
-monitor = ServerMonitor("http://www.google.com", "brahimbellahcen1996@gmail.com")
-monitor.check()
+if __name__ == "__main__":
+    monitor = ServerMonitor(
+        "http://www.google.com", 
+        "brahimbellahcen1996@gmail.com"
+    )
+    monitor.check()
 
 
 
