@@ -1,4 +1,4 @@
-# Server Monitor Script #
+# Server Status Monitor #
 The Server Monitor script is a Python script that monitors the status of a given server and sends notifications if the server is not responding or if it returns an error status code (5xx).
 
 ## Table of Contents ##
@@ -49,7 +49,13 @@ TELEGRAM_CHAT_ID=<Telegram chat id>
 ```
 
 4 - Replace the placeholders in the .env file with the actual values for your server and notification preferences.
-5 - Run the script by typing python server_monitor.py in your terminal or command prompt.
+
+5 - Run the script by typing the following command in your terminal or command prompt:
+
+```
+python server_monitor.py
+```
+
 6 - Optionally, you can use a task scheduler like cron or the Task Scheduler on Windows to run the script at regular intervals.
 
 ## Class Structure ##
