@@ -34,18 +34,20 @@ pip install requests python-decouple
 3 - Set the following environment variables in a .env file in the same directory as the script:
 
 ```
-URL=<server url>
-MAX_RETRIES=<maximum number of retries>
-RETRY_DELAY=<delay in seconds between retries>
-EMAIL_SUBJECT=<email subject>
-EMAIL_FROM=<sender email address>
-EMAIL_TO=<recipient email address>
-SMTP_SERVER=<SMTP server address>
-SMTP_PORT=<SMTP server port>
-SMTP_USER=<SMTP server username>
-SMTP_PASS=<SMTP server password>
-TELEGRAM_TOKEN=<Telegram Bot API token>
-TELEGRAM_CHAT_ID=<Telegram chat id>
+URL              = <server url>
+MAX_RETRIES      = <maximum number of retries>
+RETRY_DELAY      = <delay in seconds between retries>
+
+EMAIL_SUBJECT    = <email subject>
+EMAIL_FROM       = <sender email address>
+EMAIL_TO         = <recipient email address>
+SMTP_SERVER      = <SMTP server address>
+SMTP_PORT        = <SMTP server port>
+SMTP_USER        = <SMTP server username>
+SMTP_PASS        = <SMTP server password>
+
+TELEGRAM_TOKEN   = <Telegram Bot API token>
+TELEGRAM_CHAT_ID = <Telegram chat id>
 ```
 
 4 - Replace the placeholders in the .env file with the actual values for your server and notification preferences.
