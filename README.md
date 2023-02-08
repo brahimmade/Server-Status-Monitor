@@ -58,6 +58,24 @@ python server_monitor.py
 
 6 - Optionally, you can use a task scheduler like cron or the Task Scheduler on Windows to run the script at regular intervals.
 
+    To run the script in a server every 2 minutes, you can use a task scheduler like cron on Unix-based systems or the Task Scheduler on Windows.
+
+    Here's an example of how to use cron to run the script every 2 minutes:
+
+    Open a terminal or command prompt and type crontab -e to open the cron table.
+    Add the following line to the end of the file:
+
+    ```
+    */2 * * * * python /path/to/server_monitor.py
+    ```
+
+    This line tells cron to run the script located at /path/to/server_monitor.py every 2 minutes.
+
+    Note: Replace /path/to/server_monitor.py with the actual path to your script file on the server.
+
+    Save the file and exit.
+    The script will now run every 2 minutes and check the server status, sending notifications if necessary.
+
 ## Class Structure ##
 The script includes the following class:
 
