@@ -1,4 +1,4 @@
-Server Monitor Script
+# Server Monitor Script #
 
     The Server Monitor script is a Python script that monitors the status of a given server and sends notifications if the server is not responding or if it returns an error status code (5xx).
 
